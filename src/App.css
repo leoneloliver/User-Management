@@ -118,7 +118,11 @@ tr:nth-child(even) {
    margin-right: 30px;
    cursor: pointer;
 }
-a.active{
+.tabs:focus, .tabs:active, .tabs:hover {
+  color: #2c93f5 !important;
+  border-bottom: 1px solid #2c93f5 !important;
+}
+.active{
   color: #2c93f5 !important;
   border-bottom: 1px solid #2c93f5 !important;
 
@@ -153,10 +157,7 @@ footer{
   margin-top: 50px;
 }
 .empty {
-  background-color: #fcf8e3;
-  background-color: #f2dede;
-  border-color: #ebcccc;
-  color: #a94442;
+  text-align: center;
 }
 .alert{
   padding: .75rem 1.25rem;
@@ -173,7 +174,9 @@ footer{
     transform: rotate(360deg);
   }
 }
-
+.green{
+  background: green;
+}
 
 @media only screen and (max-width: 690px){
   .tool-bar {
