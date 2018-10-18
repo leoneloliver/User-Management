@@ -10,7 +10,7 @@ class List extends React.Component {
     items: []
   }
   componentDidMount() {
-    axios.get('https://api.myjson.com/bins/1bznuw')
+    axios.get('https://api.myjson.com/bins/hraj4')
       .then(res => {
         const items = res.data;
         this.setState({ items });
@@ -35,8 +35,8 @@ class List extends React.Component {
               <div className={styles['email']}>{ item.email }</div>
             </td>
             <td>{ item.visit }</td>
-            <td>{ item.conversation }</td>
-            <td><a href="#">&#9776;</a></td>
+            <td className={styles['center']}>{ item.conversation }</td>
+            <td width="30px"><a href="#">&#9776;</a></td>
           </tr>
           ))}
         </table>

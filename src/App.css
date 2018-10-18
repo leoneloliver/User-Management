@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  box-shadow: -1px 5px 14px #e0e0e0;
+  box-shadow: -1px 2px 4px #e0e0e0;
   /*padding-left: 20px;*/
 }
 
@@ -25,10 +25,28 @@
 
 .main{
   background: #fff;
+  /*padding-left: 20px;
+  padding-right: 20px;*/
+  /*max-width: 1100px;*/
+  margin: auto;
+  
+  margin-top: 2px;
+  display: flex;
+  flex-direction: row;
+}
+.main-content{
+  flex: 5 0 0;
   padding-left: 20px;
   padding-right: 20px;
-  max-width: 1100px;
-  margin: auto;
+  background: #eaeaea;
+}
+.aside{
+  flex: 1 0 0;
+  background: #155694;
+  color: #fff;
+  max-width: 200px;
+  font-size: 0.8em;
+  /*padding: 10px;*/
 }
 .items{
   color: fff;
@@ -46,7 +64,20 @@
   width: 30px;
   border-radius: 50px;
 }
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul li{
+  padding: 6px;
+  padding-left: 20px;
+  cursor: pointer;
 
+}
+ul li:hover, ul li:focus, ul li:active{
+  background: #2c93f5;
+}
 a{
   color: #9c9c9c;
   text-decoration: none;
@@ -57,6 +88,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     vertical-align: middle;
+    margin-bottom: 30px;
 }
 
 td, th {
@@ -90,6 +122,9 @@ th{
 
 tr:nth-child(even) {
   background-color: #ececec;
+}
+.center{
+  text-align: center;
 }
 .list-topbar{
   background: #2c93f5;
@@ -152,9 +187,9 @@ footer{
   padding: 20px;
   font-size: 0.8em;
   text-align: center;
-  color: #929292;
-  background: #ececec;
-  margin-top: 50px;
+  color: #8e8e8e;
+  background: #e6e6e6;
+  /*margin-top: 50px;*/
 }
 .empty {
   text-align: center;
@@ -177,11 +212,31 @@ footer{
 .green{
   background: green;
 }
-
+.pl-10{
+  padding-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.loged{
+  color: #12f312;
+  font-weight: 800;
+}
+.nloged{
+  color: #f59898;
+  font-weight: 800;
+}
+.icon-plus{
+  margin-right: 20px;
+  float: right;
+}
+@media only screen and (max-width: 800px){
+  .aside{
+    display: none;
+  }
+}
 @media only screen and (max-width: 690px){
   .tool-bar {
-     display: block;
-     
+     display: block;  
   }
   .search-box{
     text-align: left;
