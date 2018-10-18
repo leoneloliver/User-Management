@@ -43,7 +43,7 @@
 .aside{
   flex: 1 0 0;
   background: #155694;
-  color: #fff;
+  color: #eaeaea;
   max-width: 200px;
   font-size: 0.8em;
   /*padding: 10px;*/
@@ -218,11 +218,11 @@ footer{
   margin-top: 20px;
 }
 .loged{
-  color: #12f312;
+  color: #29b529;
   font-weight: 800;
 }
 .nloged{
-  color: #f59898;
+  color: #bfbfbf;
   font-weight: 800;
 }
 .icon-plus{
