@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class Main extends Component { 
 
-	
+
 	handleClick = () => {
     function clickable(){
       var classname = document.getElementsByClassName("class-static");
@@ -27,20 +27,16 @@ class Main extends Component {
     this.handleLoad = this.handleLoad.bind(this);
   }
 
-  componentDidMount() {
-    window.addEventListener('load', this.handleLoad);
-  }
-
-  handleLoad() {
-    this.handleClick();
-  }
-  
+  // componentDidMount() {
+  //   window.addEventListener('load', this.handleLoad);
+  // }
 
   // using axios
   state = {
     items: []
   }
   componentDidMount() {
+  	window.addEventListener('load', this.handleLoad);
     axios.get('https://api.myjson.com/bins/hraj4')
       .then(res => {
         const items = res.data;
@@ -49,6 +45,10 @@ class Main extends Component {
       })
   }
 
+  handleLoad() {
+    this.handleClick();
+  }
+  
 
   render() {
     return (
