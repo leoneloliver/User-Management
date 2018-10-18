@@ -68,14 +68,14 @@ td{
   color: #8c8c8c;
   cursor: pointer;
 }
-.each-item{
+.eachitem{
   -webkit-transition: all .1s ease;
   -moz-transition: all .1s ease;
   -o-transition: all .1s ease;
   -ms-transition: all .1s ease;
   transition: all .1s ease;
 }
-.each-item:hover{
+.eachitem:hover{
   background: #e4e4e4;
   -webkit-transition: all .1s ease;
   -moz-transition: all .1s ease;

@@ -6,6 +6,7 @@ import Main from './Main';
 import Footer from './Footer';
 
 class App extends Component {
+	
   render() {
     return (
       <div className={styles['app']}>

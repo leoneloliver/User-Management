@@ -4,6 +4,7 @@ import axios from 'axios';
 import Helmet from 'react-helmet';
 
 class List extends React.Component {
+  
   // using axios
   state = {
     items: []
@@ -27,7 +28,7 @@ class List extends React.Component {
             <th colspan="2">Conversation</th>
           </tr>
           {this.state.items.map(item => (
-          <tr className={styles['each-item']}>
+          <tr className={`${styles.eachitem} class-static`} data-name={ item.name } data-avatar={ item.photo } data-email={ item.email }>
             <td width="10px"><img src={ item.photo } className={styles['avatar']} /></td>
             <td>
               <div className={styles['name']}>{ item.name }</div>
