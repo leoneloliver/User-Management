@@ -3,7 +3,7 @@ import styles from './App.css';
 import axios from 'axios';
 import Helmet from 'react-helmet';
 
-class List extends React.Component {
+class ListDesactive extends React.Component {
   // using axios
   state = {
     items: []
@@ -16,9 +16,9 @@ class List extends React.Component {
       })
   }
   render() {
-    return (   
+    return (
       <div className={`${styles.items} ${styles.container}`}>
-        <Helmet title="SoapBox - Panel" />
+        <Helmet title="SoapBox - Delete List" />
         <div className={styles['row']}>
         <table>
           <tr className={styles['list-topbar']}>
@@ -26,25 +26,21 @@ class List extends React.Component {
             <th>Last Visit</th>
             <th colspan="2">Conversation</th>
           </tr>
-          {this.state.items.map(item => (
+          
           <tr className={styles['each-item']}>
-            <td width="10px"><img src={ item.photo } className={styles['avatar']} /></td>
-            <td>
-              <div className={styles['name']}>{ item.name }</div>
-              <div className={styles['email']}>{ item.email }</div>
+            <td colspan="4" className={`${styles.alert} ${styles.empty}`}>
+              <div className={`${styles.alert} ${styles.empty}`}>Empty List</div>
             </td>
-            <td>{ item.visit }</td>
-            <td>{ item.conversation }</td>
-            <td><a href="#">&#9776;</a></td>
           </tr>
-          ))}
+   
         </table>
-        </div>
+        </div> 
+        
       </div>
     )
   }
 }
-export default List;
+export default ListDesactive;
 
 
 
