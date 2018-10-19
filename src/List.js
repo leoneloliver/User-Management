@@ -21,7 +21,7 @@ class List extends React.Component {
       <div className={`${styles.items} ${styles.container}`}>
         <Helmet title="SoapBox - Panel" />
         <div className={styles['row']}>
-        <table>
+        <table id="myUL">
           <tr className={styles['list-topbar']}>
             <th colspan="2">Name</th>
             <th><span className={styles['only-desktop']}>Last </span>Visit</th>

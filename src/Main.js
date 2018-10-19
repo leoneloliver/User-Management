@@ -7,8 +7,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class Main extends Component { 
 
-
 	handleClick = () => {
+
     function clickable(){
       var classname = document.getElementsByClassName("class-static");
       var myFunction = function() {
@@ -51,9 +51,6 @@ class Main extends Component {
       })
   }
 
-
-  
-
   handleLoad() {
     this.handleClick();
   }
@@ -92,7 +89,7 @@ class Main extends Component {
 	     					<Link to="/ListDesactive" onClick={this.handleClick} className={styles['tabs']}>
 	       					Desactive Accounts ({ this.state.longeurD })
 	     					</Link>
-			          <div className={styles['search-box']}><input type="text" className={styles['search-item']} placeholder="Search for users" /><div className={styles['search-icon']}>&#128269;</div></div>
+			          <div className={styles['search-box']}><input id="myInput" type="text" className={styles['search-item']} placeholder="Search for users" /><div className={styles['search-icon']}>&#128269;</div></div>
 			        </div>
 	        	</div>
 	          <Route exact path="/" component={List} />
