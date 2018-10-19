@@ -42,8 +42,17 @@ class Main extends Component {
         const items = res.data;
         const longeur = res.data.length;
         this.setState({ items, longeur });
+      });
+      axios.get('https://api.myjson.com/bins/7mqaw')
+      .then(result => {
+        const itemsD = result.data;
+        const longeurD = result.data.length;
+        this.setState({ itemsD, longeurD });
       })
   }
+
+
+  
 
   handleLoad() {
     this.handleClick();
@@ -81,7 +90,7 @@ class Main extends Component {
 	       					Active Accounts ({ this.state.longeur })
 	     					</Link>
 	     					<Link to="/ListDesactive" onClick={this.handleClick} className={styles['tabs']}>
-	       					Desactive Accounts (0)
+	       					Desactive Accounts ({ this.state.longeurD })
 	     					</Link>
 			          <div className={styles['search-box']}><input type="text" className={styles['search-item']} placeholder="Search for users" /><div className={styles['search-icon']}>&#128269;</div></div>
 			        </div>
@@ -96,10 +105,3 @@ class Main extends Component {
 }
 
 export default Main;
-
-
-
-
-
-
-

@@ -4,43 +4,44 @@ import axios from 'axios';
 import Helmet from 'react-helmet';
 
 class ListDesactive extends React.Component {
-  // using axios
+   // using axios
   state = {
     items: []
   }
   componentDidMount() {
-    axios.get('https://api.myjson.com/bins/1bznuw')
+    axios.get('https://api.myjson.com/bins/7mqaw')
       .then(res => {
         const items = res.data;
         this.setState({ items });
       })
   }
   render() {
-    return (
+    return (   
       <div className={`${styles.items} ${styles.container}`}>
-        <Helmet title="SoapBox - Delete List" />
+        <Helmet title="SoapBox - Panel" />
         <div className={styles['row']}>
         <table>
           <tr className={styles['list-topbar']}>
             <th colspan="2">Name</th>
-            <th>Last Visit</th>
-            <th colspan="2">Conversation</th>
+            <th>Last<span className={styles['only-desktop']}> Visit</span><span className={styles['only-mobile']}>...</span></th>
+            <th colspan="2">Conv<span className={styles['only-desktop']}>ersation</span><span className={styles['only-mobile']}>...</span></th>
           </tr>
-          
-          <tr className={styles['each-item']}>
-            <td colspan="4" className={`${styles.alert} ${styles.empty}`}>
-              <div className={`${styles.alert} ${styles.empty}`}>Empty List</div>
+          {this.state.items.map(item => (
+          <tr className={`${styles.eachitem} class-static`} data-name={ item.name } data-avatar={ item.photo } data-email={ item.email }>
+            <td width="10px"><img src={ item.photo } className={styles['avatar']} /></td>
+            <td>
+              <div className={styles['name']}>{ item.name }</div>
+              <div className={styles['email']}>{ item.email }</div>
             </td>
+            <td>{ item.visit }</td>
+            <td className={styles['center']}>{ item.conversation }</td>
+            <td width="30px"><a href="#">&#9776;</a></td>
           </tr>
-   
+          ))}
         </table>
-        </div> 
-        
+        </div>
       </div>
     )
   }
 }
 export default ListDesactive;
-
-
-
