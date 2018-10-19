@@ -23,8 +23,8 @@ class ListDesactive extends React.Component {
         <table>
           <tr className={styles['list-topbar']}>
             <th colspan="2">Name</th>
-            <th>Last<span className={styles['only-desktop']}> Visit</span><span className={styles['only-mobile']}>...</span></th>
-            <th colspan="2">Conv<span className={styles['only-desktop']}>ersation</span><span className={styles['only-mobile']}>...</span></th>
+            <th><span className={styles['only-desktop']}>Last </span>Visit</th>
+            <th colspan="2">Conv<span className={styles['only-desktop']}>ersation</span></th>
           </tr>
           {this.state.items.map(item => (
           <tr className={`${styles.eachitem} class-static`} data-name={ item.name } data-avatar={ item.photo } data-email={ item.email }>
