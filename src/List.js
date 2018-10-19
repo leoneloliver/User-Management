@@ -25,7 +25,7 @@ class List extends React.Component {
           <tr className={styles['list-topbar']}>
             <th colspan="2">Name</th>
             <th>Last Visit</th>
-            <th colspan="2">Conversation</th>
+            <th colspan="2"><span className={styles['only-desktop']}>Conversation</span></th>
           </tr>
           {this.state.items.map(item => (
           <tr className={`${styles.eachitem} class-static`} data-name={ item.name } data-avatar={ item.photo } data-email={ item.email }>
@@ -41,6 +41,7 @@ class List extends React.Component {
           ))}
         </table>
         </div>
+        <div className={styles['add-new']}>&#10010;</div>
       </div>
     )
   }

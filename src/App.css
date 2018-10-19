@@ -61,7 +61,7 @@
   display: block;
 }
 .avatar{
-  width: 30px;
+  width: 40px;
   border-radius: 50px;
 }
 ul {
@@ -183,6 +183,19 @@ tr:nth-child(even) {
 input::placeholder {
   color: #9c9c9c;
 }
+
+input {
+  background-color: transparent;
+  border: 0px solid;
+  height: 20px;
+  width: 160px;
+  color: #CCC;
+}
+input:focus {
+    outline:none;
+    border:1px solid #2c93f5;
+}
+
 footer{
   padding: 20px;
   font-size: 0.8em;
@@ -229,6 +242,21 @@ footer{
   margin-right: 20px;
   float: right;
 }
+.add-new{
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  background: #2c93f5;
+  right: 30px;
+  bottom: 110px;
+  border-radius: 50px;
+  box-shadow: -1px -3px 9px #a0a0a0;
+  text-align: center;
+  padding: 16px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+}
 @media only screen and (max-width: 800px){
   .aside{
     display: none;
@@ -255,13 +283,26 @@ footer{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+  .search-item:focus{
+    
+  }
   .search-icon{
     margin-top: -35px;
     margin-right: 0;
     color: #9c9c9c;
     margin-left: 8px;
   }
+  .add-new{
+    right: 8px;
+    bottom: 6px;
 
+  }
+
+}
+@media only screen and (max-width: 396px){
+  .only-desktop{
+    display: none;
+  }
 }
 @media only screen and (max-width: 360px){
   .tabs{
